@@ -1,62 +1,116 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FastCantine</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тез татым | Ашкана</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="interaction/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Gabriela&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=WDXL+Lubrifont+TC&family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- v 1.32.4566 -->
   <header>
-    <h1>🍽️ FastCantine: столовая нового поколения</h1>
-    <p>Выбирай блюда и формируй заказ!</p>
+    <h1>🍔 Тез татым | URI | Ашкана 🍽️</h1>
   </header>
 
   <main>
+  
     <section id="menu">
+
       <h2>Меню</h2>
 
-      <!-- Столовая -->
       <div class="menu-row">
+      
+      <!-- Столовая -->
       <div class="category">
-        <h3>🥘 Столовая</h3>
-        <div class="dish">Манты - 130₽ <button onclick="addToOrder('Манты', 130)">+</button></div>
-        <div class="dish">Лагман - 140₽ <button onclick="addToOrder('Лагман', 140)">+</button></div>
-        <div class="dish">Пельмени - 120₽ <button onclick="addToOrder('Пельмени', 120)">+</button></div>
-        <div class="dish">Оромо - 115₽ <button onclick="addToOrder('Оромо', 115)">+</button></div>
-        <div class="dish">Пицца - 160₽ <button onclick="addToOrder('Пицца', 160)">+</button></div>
+        <h3>🥘 Столовая (1 блюда)</h3>
+        <div class="dish">Борщ - 250 сом <button onclick="addToOrder('Ашкана | Борщ', 250)">+</button></div>
+        <div class="dish">Лагман (жидкий) - 200 сом <button onclick="addToOrder('Ашкана | Лагман (жидкий)', 200)">+</button></div>
+        <div class="dish">Пельмени - 200 сом <button onclick="addToOrder('Ашкана | Пельмени', 200)">+</button></div>
+        <div class="dish">Мампар - 200 сом <button onclick="addToOrder('Ашкана | Мампар', 200)">+</button></div>
+        <div class="dish">Шорпо - 250 сом <button onclick="addToOrder('Ашкана | Шорпо', 250)">+</button></div>
+        <div class="dish">Фрикадельки - 200 сом <button onclick="addToOrder('Ашкана | Фрикадельки', 200)">+</button></div>
+        <div class="dish">Окрошка - 200 сом <button onclick="addToOrder('Ашкана | Окрошка', 200)">+</button></div>
+      </div>
+
+      <div class="category">
+        <h3>🥘 Столовая (2 блюда)</h3>
+        <div class="dish">Манты - 250 сом <button onclick="addToOrder('Ашкана | Манты', 250)">+</button></div>
+        <div class="dish">Манты (жаренные) - 200 сом <button onclick="addToOrder('Ашкана | Манты (жаренные)', 200)">+</button></div>
+        <div class="dish">Пельмени (жаренные) - 200 сом <button onclick="addToOrder('Ашкана | Пельмени (жаренные)', 200)">+</button></div>
+        <div class="dish">Оромо - 200 сом <button onclick="addToOrder('Ашкана | Оромо', 200)">+</button></div>
+        <div class="dish">Пицца - 400 сом <button onclick="addToOrder('Ашкана | Пицца', 400)">+</button></div>
+        <div class="dish">Куурдак (говядина) - 300 сом <button onclick="addToOrder('Ашкана | Куурдак (говядина)', 300)">+</button></div>
+        <div class="dish">Куурдак (баранина) - 300 сом <button onclick="addToOrder('Ашкана | Куурдак (баранина)', 300)">+</button></div>
+        <div class="dish">Плов - 200 сом <button onclick="addToOrder('Ашкана | Плов', 200)">+</button></div>
+        <div class="dish">Лагман (босо) - 250 сом <button onclick="addToOrder('Ашкана | Лагман (босо)', 250)">+</button></div>
+        <div class="dish">Катлеты с гарниром - 200 сом <button onclick="addToOrder('Ашкана | Катлеты с гарниром', 200)">+</button></div>
       </div>
 
       <!-- Fast Food -->
       <div class="category">
-        <h3>🍔 Fast Food</h3>
-        <div class="dish">Гамбургер (курица) - 150₽ <button onclick="addToOrder('Гамбургер (курица)', 150)">+</button></div>
-        <div class="dish">Гамбургер (говядина) - 160₽ <button onclick="addToOrder('Гамбургер (говядина)', 160)">+</button></div>
-        <div class="dish">Шаурма (классика) - 170₽ <button onclick="addToOrder('Шаурма (классика)', 170)">+</button></div>
-        <div class="dish">Шаурма (двойной) - 200₽ <button onclick="addToOrder('Шаурма (двойной)', 200)">+</button></div>
+        <h3>🍔 Fast Food (раздел 1)</h3>
+        <div class="dish">Бургер (курица) - 160 сом <button onclick="addToOrder('Тез татым | Бургер (курица)', 160)">+</button></div>
+        <div class="dish">Чизбургер (курица) - 180 сом <button onclick="addToOrder('Тез татым | Чизбургер (курица)', 180)">+</button></div>
+        <div class="dish">Двойной бургер (курица) - 220 сом <button onclick="addToOrder('Тез татым | Двойной бургер (курица)', 220)">+</button></div>
+        <div class="dish">Бургер (говядина) - 180 сом <button onclick="addToOrder('Тез татым | Бургер (говядина)', 180)">+</button></div>
+        <div class="dish">Чизбургер (говядина) - 180 сом <button onclick="addToOrder('Тез татым | Чизбургер (говядина)', 180)">+</button></div>
+        <div class="dish">Двойной бургер (говядина) - 220 сом <button onclick="addToOrder('Тез татым | Двойной бургер (говядина)', 220)">+</button></div>
+      </div>
+
+      <div class="category">
+        <h3>🌯 Fast Food (раздел 2)</h3> <!--🍕-->
+        <div class="dish">Шаурма (курица) - 160 сом <button onclick="addToOrder('Тез татым | Шаурма (курица)', 160)">+</button></div>
+        <div class="dish">Шаурма (курица+сыр) - 200 сом <button onclick="addToOrder('Тез татым | Шаурма (курица+сыр)', 200)">+</button></div>
+        <div class="dish">Шаурма (говядина) - 180 сом <button onclick="addToOrder('Тез татым | Шаурма (говядина)', 180)">+</button></div>
+        <div class="dish">Шаурма (говядина+сыр) - 200 сом <button onclick="addToOrder('Тез татым | Шаурма (говядина+сыр)', 200)">+</button></div>
+        <div class="dish">Крылышки (острые) - 180 сом <button onclick="addToOrder('Тез татым | Крылышки (острые)', 180)">+</button></div>
       </div>
 
       <!-- Напитки -->
       <div class="category">
         <h3>🥤 Напитки</h3>
-        <div class="dish">Чёрный чай - 50₽ <button onclick="addToOrder('Чёрный чай', 50)">+</button></div>
-        <div class="dish">Зелёный чай - 50₽ <button onclick="addToOrder('Зелёный чай', 50)">+</button></div>
-        <div class="dish">Coca-Cola - 80₽ <button onclick="addToOrder('Coca-Cola', 80)">+</button></div>
+        <div class="dish">Домашний лимонад - 80 сом <button onclick="addToOrder('Прочие | Домашний лимонад', 80)">+</button></div>
+        <div class="dish">Морс из облепихи - 90 сом <button onclick="addToOrder('Прочие | Морс из облепихи', 90)">+</button></div>
+        <div class="dish">Чай с мятой - 60 сом <button onclick="addToOrder('Прочие | Чай с мятой', 60)">+</button></div>
+        <div class="dish">Кофе - 20 сом <button onclick="addToOrder('Прочие | Кофе', 20)">+</button></div>
+        <div class="dish">Чёрный чай - 20 сом <button onclick="addToOrder('Прочие | Чёрный чай', 20)">+</button></div>
+        <div class="dish">Зелёный чай - 20 сом <button onclick="addToOrder('Прочие | Зелёный чай', 20)">+</button></div>
+        <div class="dish">Coca-Cola - 80 сом <button onclick="addToOrder('Прочие | Coca-Cola', 80)">+</button></div>
+        <div class="dish">Fuse Tea - 80 сом <button onclick="addToOrder('Прочие | Fuse Tea', 80)">+</button></div>
+        <div class="dish">Lipton - 100 сом <button onclick="addToOrder('Прочие | Lipton', 100)">+</button></div>
+        <div class="dish">Maxi Чай - 100 сом <button onclick="addToOrder('Прочие | Maxi Чай', 100)">+</button></div>
+        <h3>🍞 Прочие</h3>
+        <div class="dish">Хлеб - 25 сом <button onclick="addToOrder('Прочие | Хлеб', 25)">+</button></div>
+        <div class="dish">Лепешка - 25 сом <button onclick="addToOrder('Прочие | Лепешка', 25)">+</button></div>
+        <div class="dish">Халапеньо - 20 сом <button onclick="addToOrder('Прочие | Халапеньо', 20)">+</button></div>
       </div>
+
       </div>
+
     </section>
 
     <section id="order">
       <h2>Ваш заказ:</h2>
-      <ul id="order-list"></ul>
-      <p>💰 Общая сумма: <span id="total">0</span>₽</p>
-    </section>
+      <div id="order-list" class="horizontal-list"></div>
+      <p>💰 Общая сумма: <span id="total">0</span> сом</p>
+      <button id="clear-order">🧹 Очистить весь заказ</button>
+      <button id="replace-last">⌫ Очистить последние заказы</button>
+      <button id="placeAnOrder">✅ Оформить заказ</button>
+      <div id="fullscreen-confirmation" class="confirmation-hidden">❤️ Заказ принят!</div>
+      <div id="confetti-container"></div>
+      <div class="confetti"></div>
+      </section>
+
   </main>
 
-  <footer>
-    <p>&copy; Контр — проект для GitHub Portfolio</p>
-  </footer>
+  <!-- <footer>
+    <p>&copy; Контр Гамбит — проект CRM для GitHub Portfolio</p>
+  </footer> -->
 
-  <script src="script.js"></script>
+  <script src="interaction/script.js"></script>
 </body>
 </html>
